@@ -5,15 +5,15 @@ Authors: Shufeng Kong <sup>1</sup>, Dan Guevarra <sup>2</sup>, Carla P. Gomes <s
 2) Division of Engineering and Applied Science, 
    California Institure of Technology, Pasadena, CA, USA
    
+We introduce the Hierarchical Correlation Learning for Multi-property Prediction framework (H-CLMP, pronounced H-CLAMP) that seamlessly integrates (i) prediction using only a material’s composition, (ii) learning and exploitation of correlations among target properties in multi-target regression, and (iii) leveraging training data from tangential domains via generative transfer learning. The model is demonstrated for prediction of spectral optical absorption of complex metal oxides spanning 69 3-cation metal oxide composition spaces. H-CLMP accurately predicts non-linear composition-property relationships in composition spaces for which no training data is available, which broadens the purview of machine learning to the discovery of materials with exceptional properties. This achievement results from the principled integration of latent embedding learning, property correlation learning, generative transfer learning, and attention models. The best performance is obtained using H-CLMP with Transfer learning (H-CLMP(T)) wherein a generative adversarial network is trained on computational density of states data and deployed in the target domain to augment prediction of optical absorption from composition. H-CLMP(T) aggregates multiple knowledge sources with a framework that is well-suited for multi-target regression across the physical sciences.
 
-This is a Pytorch implementation of the HCLMP model proposed in the above paper. 
+This is a Pytorch implementation of the H-CLMP model. 
 
-### Dataset, trained models, and results 
+The paper is avaiable here https://arxiv.org/abs/2106.02225
 
-Datasets, trained models, and results can be found in this link https://drive.google.com/drive/folders/1z5ULw7GcilB6L7Rjgkv5tOKL0n3xm0cT?usp=sharing
+### Datasets 
 
-Please download the three zip files and place in the main folder and unzip them. A discription of the datasets
-can be found in the paper.
+The spectral optical absorption dataset and a discription of the dataset can be found in https://data.caltech.edu/records/1878. To run our software, we need addtional DOS dataset from the material project https://materialsproject.org/. Therefore, we provide a colloection of all the necessary datasets to run our software in this link https://www.cs.cornell.edu/gomes/udiscoverit/?tag=materials. Please download the data.zip file and place in the main folder and unzip them.
 
 ### Enviroments
 
@@ -111,7 +111,6 @@ The graph encoder we adopted takes the element embedding and element fraction as
 This piece of codes is modified from Goodall and Lee, Predicting materials properties without crystal structure: 
 deep representation learning from stoichiometry, Nature communication, 2020. Copyright of the graph encoder belongs to the authors. 
 Please see the Github Link: https://github.com/CompRhys/roost for details.
-
 
 
 
